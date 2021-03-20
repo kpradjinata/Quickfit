@@ -1,5 +1,5 @@
 //
-//  InfoViewController.swift
+//  SelectViewController.swift
 //  Workouts
 //
 //  Created by Kevin Pradjinata on 3/20/21.
@@ -7,15 +7,16 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
-    @IBOutlet weak var goodB: UIView!
+class SelectViewController: UIViewController {
+
+    @IBOutlet var difficult: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = false
-        goodB.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
+        difficult.forEach({$0.layer.cornerRadius = 15})
     }
     
 
