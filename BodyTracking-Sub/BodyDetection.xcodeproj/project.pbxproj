@@ -13,11 +13,16 @@
 		2F60E1E222631E0F00357E98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E022631E0F00357E98 /* Main.storyboard */; };
 		2F60E1E422631E0F00357E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E322631E0F00357E98 /* Assets.xcassets */; };
 		2F60E1E722631E0F00357E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E522631E0F00357E98 /* LaunchScreen.storyboard */; };
+		4A51E12B1A9AEAF98FEBA9AE /* Pods_BodyDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3183C0AE1D846CD139CC2D0F /* Pods_BodyDetection.framework */; };
 		718E55BC2289F8FF00A9B13B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 718E55BB2289F8FF00A9B13B /* README.md */; };
+		D0622F942606AE680085C75B /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = D0622F932606AE680085C75B /* correct.wav */; };
+		D0622F972606AE700085C75B /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = D0622F962606AE700085C75B /* wrong.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C8C7867228387D2006A6EE1 /* character */ = {isa = PBXFileReference; lastKnownFileType = folder; path = character; sourceTree = "<group>"; };
+		150E139EA70F4E03F1EF741E /* Pods-BodyDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BodyDetection.debug.xcconfig"; path = "Target Support Files/Pods-BodyDetection/Pods-BodyDetection.debug.xcconfig"; sourceTree = "<group>"; };
+		2935B6642D47E4AB4C269CA8 /* Pods-BodyDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BodyDetection.release.xcconfig"; path = "Target Support Files/Pods-BodyDetection/Pods-BodyDetection.release.xcconfig"; sourceTree = "<group>"; };
 		2F60E1D822631E0E00357E98 /* BodyDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F60E1DA22631E0F00357E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F60E1DC22631E0F00357E98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,9 +30,13 @@
 		2F60E1E322631E0F00357E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F60E1E622631E0F00357E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F60E1EB22631E0F00357E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3183C0AE1D846CD139CC2D0F /* Pods_BodyDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BodyDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCA879A14A3351D9E9CEA98 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		718E55BB2289F8FF00A9B13B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		78F4E054153DD3A4202C28BA /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		D0622F932606AE680085C75B /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		D0622F962606AE700085C75B /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
+		D082121B2606C2B300C0F0C9 /* AR Session 1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "AR Session 1.mov"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A51E12B1A9AEAF98FEBA9AE /* Pods_BodyDetection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,14 +59,27 @@
 			name = Configuration;
 			sourceTree = "<group>";
 		};
+		2F5114BEA72D4E7E3C39DBDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				150E139EA70F4E03F1EF741E /* Pods-BodyDetection.debug.xcconfig */,
+				2935B6642D47E4AB4C269CA8 /* Pods-BodyDetection.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2F60E1B122631DCF00357E98 = {
 			isa = PBXGroup;
 			children = (
+				D082121B2606C2B300C0F0C9 /* AR Session 1.mov */,
 				718E55BB2289F8FF00A9B13B /* README.md */,
 				2F60E1D922631E0F00357E98 /* BodyDetection */,
 				2F60E1BB22631DCF00357E98 /* Products */,
 				29819F71B3026A375E893049 /* Configuration */,
 				5CAEF4054B950A25D1A4FF99 /* LICENSE */,
+				2F5114BEA72D4E7E3C39DBDA /* Pods */,
+				DB2C171C44EBBC88416BB287 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +100,8 @@
 				2F60E1E022631E0F00357E98 /* Main.storyboard */,
 				2F60E1E322631E0F00357E98 /* Assets.xcassets */,
 				2F60E1E522631E0F00357E98 /* LaunchScreen.storyboard */,
+				D0622F932606AE680085C75B /* correct.wav */,
+				D0622F962606AE700085C75B /* wrong.wav */,
 				2F60E1EB22631E0F00357E98 /* Info.plist */,
 			);
 			path = BodyDetection;
@@ -90,6 +115,14 @@
 			path = LICENSE;
 			sourceTree = "<group>";
 		};
+		DB2C171C44EBBC88416BB287 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3183C0AE1D846CD139CC2D0F /* Pods_BodyDetection.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F60E1EE22631E0F00357E98 /* Build configuration list for PBXNativeTarget "BodyDetection" */;
 			buildPhases = (
+				9C44945262D9D481BA8BA8D6 /* [CP] Check Pods Manifest.lock */,
 				2F60E1D422631E0E00357E98 /* Sources */,
 				2F60E1D522631E0E00357E98 /* Frameworks */,
 				2F60E1D622631E0E00357E98 /* Resources */,
+				04A6E65212A6B67D7D61624B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,12 +187,56 @@
 				0C8C7868228387D2006A6EE1 /* character in Resources */,
 				2F60E1E722631E0F00357E98 /* LaunchScreen.storyboard in Resources */,
 				718E55BC2289F8FF00A9B13B /* README.md in Resources */,
+				D0622F972606AE700085C75B /* wrong.wav in Resources */,
 				2F60E1E422631E0F00357E98 /* Assets.xcassets in Resources */,
 				2F60E1E222631E0F00357E98 /* Main.storyboard in Resources */,
+				D0622F942606AE680085C75B /* correct.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A6E65212A6B67D7D61624B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BodyDetection/Pods-BodyDetection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BodyDetection/Pods-BodyDetection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BodyDetection/Pods-BodyDetection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C44945262D9D481BA8BA8D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BodyDetection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F60E1D422631E0E00357E98 /* Sources */ = {

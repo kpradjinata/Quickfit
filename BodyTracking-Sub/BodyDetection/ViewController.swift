@@ -9,10 +9,19 @@ import UIKit
 import RealityKit
 import ARKit
 import Combine
+import AVFoundation
 
 class ViewController: UIViewController, ARSessionDelegate {
 
     @IBOutlet var arView: ARView!
+    var player: AVAudioPlayer!
+    
+    var reps = 0
+    var hit50 = false
+    var angles:[Float] = []
+    var heights:[Float] = []
+    
+    
     
     // The 3D character to display.
     var character: BodyTrackedEntity?
@@ -28,7 +37,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         guard ARBodyTrackingConfiguration.isSupported else {
             fatalError("This feature is only supported on devices with an A12 chip")
         }
-
+        
         // Run a body tracking configration.
         let configuration = ARBodyTrackingConfiguration()
         
@@ -58,7 +67,6 @@ class ViewController: UIViewController, ARSessionDelegate {
     
     func angleBetween(_ v1:SCNVector3, _ v2:SCNVector3)->Float{
         let cosinus = dotProduct(left: v1, right: v2) / v1.length / v2.length
-
         let angle = acos(cosinus)
         return angle
     }
@@ -68,48 +76,72 @@ class ViewController: UIViewController, ARSessionDelegate {
         return left.x * right.x + left.y * right.y + left.z * right.z
     }
     
+    func playSound(soundName: String){
+        let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+    }
+    
+    func create3x3Vector(vector: simd_float4x4) -> SCNVector3{
+        return SCNVector3Make(vector.columns.3.x, vector.columns.3.y, vector.columns.3.z)
+    }
+    
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
         for anchor in anchors {
             guard let bodyAnchor = anchor as? ARBodyAnchor else { continue }
+            
             
             // Update the position of the character anchor's position.
             let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
             characterAnchor.position = bodyPosition + characterOffset
             
-            
-            
-            
-//            print("x: \(abs(headTransform.columns.1.x)), y: \(abs(headTransform.columns.1.y)), z: \(abs(headTransform.columns.1.z))")
-//
-//            print(bodyAnchor.skeleton.modelTransform(for: .head))
-            
+            // init skeleton
             let arSkeleton = bodyAnchor.skeleton
             
+            
+            // BICEP-CODE
             let shoulder = arSkeleton.modelTransform(for: .leftShoulder)
             let hand = arSkeleton.modelTransform(for: .leftHand)
-//            let matrix1 = SCNMatrix4(upLeg!)
-//            let matrix2 = SCNMatrix4(spine7!)
-//            let matrix3 = SCNMatrix4(leg!)
-            let shoulderPOS:SCNVector3 = SCNVector3Make(shoulder!.columns.3.x, shoulder!.columns.3.y, shoulder!.columns.3.z)
-            let handPOS = SCNVector3Make(hand!.columns.3.x, hand!.columns.3.y, hand!.columns.3.z)
-            
-//            print(leg)
+            let spine = arSkeleton.modelTransform(for: ARSkeleton.JointName(rawValue: "spine_7_joint"))
+
+            // Bicep-Curl Values:
+            let shoulderPOS = create3x3Vector(vector: shoulder!)
+            let handPOS = create3x3Vector(vector: hand!)
+            let spinePOS = create3x3Vector(vector: spine!)
+
             //Compute the angle made by leg joint and spine7 joint
             //from the hip_joint (root node of the skeleton)
-            let angle = angleBetween(shoulderPOS, handPOS)
+            let angle = angleBetween(shoulderPOS, spinePOS) * 180.0 / Float.pi
+            let heightDifferential = shoulder!.columns.3.y - (hand?.columns.3.y)!
+
+            angles.append(angle)
+            heights.append(heightDifferential)
+
+            if let maxAngle = angles.max(), let minHeight = heights.min(){
+                if(minHeight < 0.1){
+                    if(maxAngle >= 8 && maxAngle <= 9.5){ // 0.6 off
+                        self.playSound(soundName: "correct")
+                        reps += 1
+                    }
+                    else{
+                        self.playSound(soundName: "wrong")
+                    }
+
+                    angles = []
+                    heights = []
+                    
+                    
+                }
+            }
             
-//            print("angle : ", angle * 180.0 / Float.pi)
-            print(shoulder!.columns.3.y - (hand?.columns.3.y)!)
-            print(arSkeleton.definition.jointNames)
+
             
+            //JUMP-SQUAT CODE
+//            let lshoulder = arSkeleton.modelTransform(for: .leftShoulder)
+//            let rshoulder = arSkeleton.modelTransform(for: .rightShoulder)
+//            let spine = arSkeleton.modelTransform(for: ARSkeleton.JointName(rawValue: "spine_7_joint"))
+
             
-            
-//            print("x: \(abs(headTransform.columns.0.x)), y: \(abs(headTransform.columns.0.y)), z: \(abs(headTransform.columns.0.z))")
-            
-            
-//            let matrix = simd_float4x4([[0.96619135, -0.2569147, -0.021659307, 0.0], [0.25668123, 0.95059294, 0.17460762, 0.0], [-0.02427008, -0.17426391, 0.98439986, 0.0], [0.04634987, 0.0005390548, 3.246308e-05, 1.0]])
-//
-//            print(matrix.columns.0.x)
             // Also copy over the rotation of the body anchor, because the skeleton's pose
             // in the world is relative to the body anchor's rotation.
             characterAnchor.orientation = Transform(matrix: bodyAnchor.transform).rotation
