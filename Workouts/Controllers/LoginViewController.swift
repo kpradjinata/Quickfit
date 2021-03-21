@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var first: UITextField!
     @IBOutlet weak var second: UITextField!
+    @IBOutlet weak var balls: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = false
         self.navigationController?.isNavigationBarHidden = true
+        balls.layer.cornerRadius = 20
         first.delegate = self
         second.delegate = self
         

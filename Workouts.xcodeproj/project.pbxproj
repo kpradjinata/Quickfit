@@ -96,7 +96,6 @@
 		0A4D627A2607525E00723168 /* character */ = {
 			isa = PBXGroup;
 			children = (
-				0A9A08C8260758EF00CDDC78 /* robot.usdz */,
 			);
 			path = character;
 			sourceTree = "<group>";
@@ -122,6 +121,7 @@
 			children = (
 				0AB6B3F726075AF3004BDE6E /* wrong.wav */,
 				0AB6B3F426075AE1004BDE6E /* correct.wav */,
+				0A9A08C8260758EF00CDDC78 /* robot.usdz */,
 				0A4D627A2607525E00723168 /* character */,
 				0A7154BF2605B5F3009A5C5F /* AppDelegate.swift */,
 				0A7154C12605B5F3009A5C5F /* SceneDelegate.swift */,

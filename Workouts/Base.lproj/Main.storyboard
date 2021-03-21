@@ -135,6 +135,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7hq-tg-rBJ"/>
                     <connections>
+                        <outlet property="balls" destination="93g-8U-D2o" id="FJ3-aI-8Fa"/>
                         <outlet property="first" destination="SS7-2E-W6n" id="H1s-ux-byC"/>
                         <outlet property="second" destination="qy3-G3-CMo" id="qjl-Hd-Vd3"/>
                     </connections>
@@ -715,7 +716,7 @@
                                 <rect key="frame" x="23" y="32" width="385" height="173"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0Zn-Ub-Nq8">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.34999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="0Zn-Ub-Nq8">
                                 <rect key="frame" x="23" y="228" width="385" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
@@ -764,6 +765,10 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graphconsist" translatesAutoresizingMaskIntoConstraints="NO" id="ota-zq-nNN">
                                 <rect key="frame" x="20" y="151" width="388" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graphbad" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-Yj-DSd">
+                                <rect key="frame" x="20" y="484" width="388" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -981,7 +986,7 @@
                                 <rect key="frame" x="23" y="32" width="385" height="173"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sid-dt-Enj">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.11" translatesAutoresizingMaskIntoConstraints="NO" id="Sid-dt-Enj">
                                 <rect key="frame" x="23" y="228" width="385" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
@@ -1051,6 +1056,7 @@
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="exer" width="385" height="155"/>
         <image name="graph1" width="388" height="165"/>
+        <image name="graphbad" width="700" height="400"/>
         <image name="graphconsist" width="700" height="400"/>
         <image name="hitt" width="108" height="108"/>
         <image name="lat" width="108" height="108"/>

@@ -47,7 +47,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
         
         // Asynchronously load the 3D character.
         var cancellable: AnyCancellable? = nil
-        cancellable = Entity.loadBodyTrackedAsync(named: "character/robot").sink(
+        cancellable = Entity.loadBodyTrackedAsync(named: "robot").sink(
             receiveCompletion: { completion in
                 if case let .failure(error) = completion {
                     print("Error: Unable to load model: \(error.localizedDescription)")
@@ -56,7 +56,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
         }, receiveValue: { (character: Entity) in
             if let character = character as? BodyTrackedEntity {
                 // Scale the character to human size
-                character.scale = [1.0, 1.0, 1.0]
+                character.scale = [0.5, 0.5, 0.5]
                 self.character = character
                 cancellable?.cancel()
             } else {
