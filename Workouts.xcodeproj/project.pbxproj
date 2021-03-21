@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4D627C2607529400723168 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A4D627B2607529400723168 /* robot.usdz */; };
+		0A4D627F260754FC00723168 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D627E260754FC00723168 /* ARViewController.swift */; };
 		0A7154C02605B5F3009A5C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7154BF2605B5F3009A5C5F /* AppDelegate.swift */; };
 		0A7154C22605B5F3009A5C5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7154C12605B5F3009A5C5F /* SceneDelegate.swift */; };
 		0A7154C42605B5F3009A5C5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7154C32605B5F3009A5C5F /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A4D627B2607529400723168 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = robot.usdz; path = ../../../../Downloads/robot.usdz; sourceTree = "<group>"; };
+		0A4D627E260754FC00723168 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		0A7154BC2605B5F3009A5C5F /* Workouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7154BF2605B5F3009A5C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A7154C12605B5F3009A5C5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4D627A2607525E00723168 /* character */ = {
+			isa = PBXGroup;
+			children = (
+				0A4D627B2607529400723168 /* robot.usdz */,
+			);
+			path = character;
+			sourceTree = "<group>";
+		};
 		0A7154B32605B5F3009A5C5F = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 		0A7154BE2605B5F3009A5C5F /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
+				0A4D627A2607525E00723168 /* character */,
 				0A7154BF2605B5F3009A5C5F /* AppDelegate.swift */,
 				0A7154C12605B5F3009A5C5F /* SceneDelegate.swift */,
 				0AC4F6742606B77E00486276 /* Fonts */,
@@ -148,6 +161,7 @@
 				0AC4F66E26067B2200486276 /* Select2ViewController.swift */,
 				0AC4F67126067DC600486276 /* LoginViewController.swift */,
 				0A7154C32605B5F3009A5C5F /* ViewController.swift */,
+				0A4D627E260754FC00723168 /* ARViewController.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -226,6 +240,7 @@
 				0AC4F6922606B7DB00486276 /* Gotham-Thin.otf in Resources */,
 				0AC4F6982606B7DB00486276 /* Gotham-Black.otf in Resources */,
 				0A7154C92605B5F6009A5C5F /* Assets.xcassets in Resources */,
+				0A4D627C2607529400723168 /* robot.usdz in Resources */,
 				0A7154C72605B5F3009A5C5F /* Main.storyboard in Resources */,
 				0AC4F6932606B7DB00486276 /* GothamBold.ttf in Resources */,
 				0AC4F68E2606B7DB00486276 /* GothamLightItalic.ttf in Resources */,
@@ -244,6 +259,7 @@
 				0AC4F67226067DC600486276 /* LoginViewController.swift in Sources */,
 				0AC4F66C2605EA9F00486276 /* SelectViewController.swift in Sources */,
 				0AC4F66F26067B2200486276 /* Select2ViewController.swift in Sources */,
+				0A4D627F260754FC00723168 /* ARViewController.swift in Sources */,
 				0A7154C42605B5F3009A5C5F /* ViewController.swift in Sources */,
 				0A7154C02605B5F3009A5C5F /* AppDelegate.swift in Sources */,
 				0ADBFB592605E101008DAA62 /* InfoViewController.swift in Sources */,

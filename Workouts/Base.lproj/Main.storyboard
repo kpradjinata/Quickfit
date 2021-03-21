@@ -10,20 +10,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Gotham-Bold.otf">
-            <string>Gotham-Bold</string>
-        </array>
-        <array key="Gotham-Light.otf">
-            <string>Gotham-Light</string>
-        </array>
         <array key="Gotham-Thin.otf">
             <string>Gotham-Thin</string>
         </array>
         <array key="Gotham-XLight.otf">
             <string>Gotham-XLight</string>
         </array>
+        <array key="GothamBold.ttf">
+            <string>Gotham-Bold</string>
+        </array>
         <array key="GothamBook.ttf">
             <string>Gotham-Book</string>
+        </array>
+        <array key="GothamLight.ttf">
+            <string>Gotham-Light</string>
         </array>
         <array key="GothamMedium_1.ttf">
             <string>Gotham-Medium</string>
@@ -977,6 +977,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKg-2x-9iR">
+                                <rect key="frame" x="23" y="330" width="376" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="Z4k-PZ-Xgl" kind="show" id="J3B-wn-E7r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h9a-mV-DX9"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -990,6 +997,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzE-BX-28G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-161.21495327102804" y="2323.5421166306696"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Lh-4X-NVs">
+            <objects>
+                <viewController id="Z4k-PZ-Xgl" customClass="ARViewController" customModule="Workouts" customModuleProvider="target" sceneMemberID="viewController">
+                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="VW7-Ad-KCD">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </arView>
+                    <navigationItem key="navigationItem" id="rCf-MJ-kUV"/>
+                    <connections>
+                        <outlet property="arView" destination="VW7-Ad-KCD" id="4D0-z1-4OD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjx-BA-ro3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633.64485981308405" y="2344.2764578833694"/>
         </scene>
     </scenes>
     <resources>
