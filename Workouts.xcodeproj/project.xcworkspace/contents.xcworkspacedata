@@ -2,63 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../Gotham-Font/freefontsfamily.com.txt">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-Black.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-Bold.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-BookItalic.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-Light.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-Thin.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-ThinItalic.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-UltraItalic.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-XLight.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/Gotham-XLightItalic.otf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamBold.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamBoldItalic.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamBook.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamBookItalic.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamLight.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamLightItalic.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamMedium_1.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamMedium.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../Gotham-Font/GothamMediumItalic.ttf">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

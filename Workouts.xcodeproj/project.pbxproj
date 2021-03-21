@@ -34,6 +34,9 @@
 		0A9A08C52607588500CDDC78 /* GothamMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A08B22607588400CDDC78 /* GothamMedium.ttf */; };
 		0A9A08C62607588500CDDC78 /* GothamBookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A08B32607588500CDDC78 /* GothamBookItalic.ttf */; };
 		0A9A08C9260758EF00CDDC78 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A08C8260758EF00CDDC78 /* robot.usdz */; };
+		0AB6B3F526075AE1004BDE6E /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB6B3F426075AE1004BDE6E /* correct.wav */; };
+		0AB6B3F826075AF3004BDE6E /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AB6B3F726075AF3004BDE6E /* wrong.wav */; };
+		0ABAD3402607612E00F5CCFA /* StatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAD33F2607612E00F5CCFA /* StatViewController.swift */; };
 		0AC4F66C2605EA9F00486276 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4F66B2605EA9F00486276 /* SelectViewController.swift */; };
 		0AC4F66F26067B2200486276 /* Select2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4F66E26067B2200486276 /* Select2ViewController.swift */; };
 		0AC4F67226067DC600486276 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4F67126067DC600486276 /* LoginViewController.swift */; };
@@ -70,6 +73,9 @@
 		0A9A08B22607588400CDDC78 /* GothamMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium.ttf; sourceTree = "<group>"; };
 		0A9A08B32607588500CDDC78 /* GothamBookItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBookItalic.ttf; sourceTree = "<group>"; };
 		0A9A08C8260758EF00CDDC78 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
+		0AB6B3F426075AE1004BDE6E /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		0AB6B3F726075AF3004BDE6E /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
+		0ABAD33F2607612E00F5CCFA /* StatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatViewController.swift; sourceTree = "<group>"; };
 		0AC4F66B2605EA9F00486276 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		0AC4F66E26067B2200486276 /* Select2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select2ViewController.swift; sourceTree = "<group>"; };
 		0AC4F67126067DC600486276 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -114,11 +120,13 @@
 		0A7154BE2605B5F3009A5C5F /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
+				0AB6B3F726075AF3004BDE6E /* wrong.wav */,
+				0AB6B3F426075AE1004BDE6E /* correct.wav */,
 				0A4D627A2607525E00723168 /* character */,
 				0A7154BF2605B5F3009A5C5F /* AppDelegate.swift */,
 				0A7154C12605B5F3009A5C5F /* SceneDelegate.swift */,
 				0AC4F6742606B77E00486276 /* Fonts */,
-				0ADBFB5B2605E10B008DAA62 /* New Group */,
+				0ADBFB5B2605E10B008DAA62 /* Controllers */,
 				0A7154C52605B5F3009A5C5F /* Main.storyboard */,
 				0A7154C82605B5F6009A5C5F /* Assets.xcassets */,
 				0A7154CA2605B5F6009A5C5F /* LaunchScreen.storyboard */,
@@ -153,7 +161,7 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		0ADBFB5B2605E10B008DAA62 /* New Group */ = {
+		0ADBFB5B2605E10B008DAA62 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				0ADBFB582605E101008DAA62 /* InfoViewController.swift */,
@@ -161,9 +169,10 @@
 				0AC4F66E26067B2200486276 /* Select2ViewController.swift */,
 				0AC4F67126067DC600486276 /* LoginViewController.swift */,
 				0A7154C32605B5F3009A5C5F /* ViewController.swift */,
+				0ABAD33F2607612E00F5CCFA /* StatViewController.swift */,
 				0A4D627E260754FC00723168 /* ARViewController.swift */,
 			);
-			path = "New Group";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +235,7 @@
 				0A9A08B72607588500CDDC78 /* freefontsfamily.com.txt in Resources */,
 				0A9A08C42607588500CDDC78 /* Gotham-Black.otf in Resources */,
 				0A9A08B92607588500CDDC78 /* GothamBoldItalic.ttf in Resources */,
+				0AB6B3F526075AE1004BDE6E /* correct.wav in Resources */,
 				0A7154CC2605B5F6009A5C5F /* LaunchScreen.storyboard in Resources */,
 				0A9A08B62607588500CDDC78 /* Gotham-Thin.otf in Resources */,
 				0A9A08B52607588500CDDC78 /* GothamMediumItalic.ttf in Resources */,
@@ -244,6 +254,7 @@
 				0A9A08BA2607588500CDDC78 /* GothamBook.ttf in Resources */,
 				0A9A08C22607588500CDDC78 /* Gotham-BookItalic.otf in Resources */,
 				0A9A08BB2607588500CDDC78 /* Gotham-ThinItalic.otf in Resources */,
+				0AB6B3F826075AF3004BDE6E /* wrong.wav in Resources */,
 				0A9A08C02607588500CDDC78 /* Gotham-Bold.otf in Resources */,
 				0A7154C72605B5F3009A5C5F /* Main.storyboard in Resources */,
 			);
@@ -257,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AC4F67226067DC600486276 /* LoginViewController.swift in Sources */,
+				0ABAD3402607612E00F5CCFA /* StatViewController.swift in Sources */,
 				0AC4F66C2605EA9F00486276 /* SelectViewController.swift in Sources */,
 				0AC4F66F26067B2200486276 /* Select2ViewController.swift in Sources */,
 				0A4D627F260754FC00723168 /* ARViewController.swift in Sources */,

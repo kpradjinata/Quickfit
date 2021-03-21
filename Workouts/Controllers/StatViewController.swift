@@ -1,17 +1,16 @@
 //
-//  LoginViewController.swift
+//  StatViewController.swift
 //  Workouts
 //
-//  Created by Kevin Pradjinata on 3/20/21.
+//  Created by Kevin Pradjinata on 3/21/21.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class StatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = false
         self.navigationController?.isNavigationBarHidden = true
