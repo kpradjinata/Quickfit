@@ -768,7 +768,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graphbad" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-Yj-DSd">
-                                <rect key="frame" x="20" y="484" width="388" height="264"/>
+                                <rect key="frame" x="0.0" y="484" width="428" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

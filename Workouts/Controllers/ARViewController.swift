@@ -56,7 +56,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
         }, receiveValue: { (character: Entity) in
             if let character = character as? BodyTrackedEntity {
                 // Scale the character to human size
-                character.scale = [0.5, 0.5, 0.5]
+                character.scale = [1.0, 1.0, 1.0]
                 self.character = character
                 cancellable?.cancel()
             } else {
@@ -69,6 +69,22 @@ class ARViewController: UIViewController, ARSessionDelegate {
         let cosinus = dotProduct(left: v1, right: v2) / v1.length / v2.length
         let angle = acos(cosinus)
         return angle
+    }
+    
+    func optomizeArray(with arr:[Float], type: Int, count: Int) -> [Float]{
+        var temp:Float = 0.0
+        if arr.count > count{
+            if type == 0 {
+                temp = arr.max()!
+            } else{
+                temp = arr.min()!
+            }
+            return [temp]
+        }
+        else{
+            return arr
+        }
+        
     }
 
     // Dot product of two vectors
@@ -98,13 +114,10 @@ class ARViewController: UIViewController, ARSessionDelegate {
             // init skeleton
             let arSkeleton = bodyAnchor.skeleton
             
-            
-            // BICEP-CODE
             let shoulder = arSkeleton.modelTransform(for: .leftShoulder)
             let hand = arSkeleton.modelTransform(for: .leftHand)
             let spine = arSkeleton.modelTransform(for: ARSkeleton.JointName(rawValue: "spine_7_joint"))
 
-            // Bicep-Curl Values:
             let shoulderPOS = create3x3Vector(vector: shoulder!)
             let handPOS = create3x3Vector(vector: hand!)
             let spinePOS = create3x3Vector(vector: spine!)
@@ -116,6 +129,9 @@ class ARViewController: UIViewController, ARSessionDelegate {
 
             angles.append(angle)
             heights.append(heightDifferential)
+            
+            angles = optomizeArray(with: angles, type: 0, count: 50)
+            heights = optomizeArray(with: heights, type: 1, count: 50)
 
             if let maxAngle = angles.max(), let minHeight = heights.min(){
                 if(minHeight < 0.1){
@@ -134,12 +150,6 @@ class ARViewController: UIViewController, ARSessionDelegate {
                 }
             }
             
-
-            
-            //JUMP-SQUAT CODE
-//            let lshoulder = arSkeleton.modelTransform(for: .leftShoulder)
-//            let rshoulder = arSkeleton.modelTransform(for: .rightShoulder)
-//            let spine = arSkeleton.modelTransform(for: ARSkeleton.JointName(rawValue: "spine_7_joint"))
             
             // Also copy over the rotation of the body anchor, because the skeleton's pose
             // in the world is relative to the body anchor's rotation.
