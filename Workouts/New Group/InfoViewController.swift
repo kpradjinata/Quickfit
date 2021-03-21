@@ -9,11 +9,13 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var back: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = false
+        back.layer.cornerRadius = 15
 
         
         // Do any additional setup after loading the view.
