@@ -8,7 +8,8 @@
 import UIKit
 
 class Select2ViewController: UIViewController {
-
+    @IBOutlet var difficulty: [UIView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.shadowImage = UIImage()
