@@ -8,17 +8,13 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-    @IBOutlet weak var goodB: UIView!
-    @IBOutlet weak var weightBack: UIView!
-    @IBOutlet weak var front: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = false
-        goodB.layer.cornerRadius = 15
-        weightBack.layer.cornerRadius = 35
-        front.layer.cornerRadius = 30
+
         
         // Do any additional setup after loading the view.
     }
